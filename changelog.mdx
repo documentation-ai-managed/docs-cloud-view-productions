@@ -1,0 +1,161 @@
+---
+title: Changelog
+description: Stay updated with the latest releases and improvements in Cloud View Productions. This page tracks version history and key updates to our platform and services.
+---
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Enhanced analytics dashboard with real-time viewer tracking for virtual tours and dedicated property websites
+- Added brochure customization options, including dynamic QR codes linking to tours
+- Introduced video export in 4K resolution for high-end marketing campaigns
+
+## Improvements
+
+- Optimized website generation speed by `>40%` for faster client delivery
+- Improved mobile responsiveness across all tour viewers
+
+## Bug Fixes
+
+- Fixed intermittent loading issues in virtual tour embeds
+- Resolved analytics reporting discrepancies for multi-property campaigns
+
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Performance upgrades to video rendering pipeline, reducing processing time by `30%`
+- Better integration with third-party CRMs for seamless property data import
+
+## Bug Fixes
+
+- Corrected brochure PDF generation errors on properties with special characters in addresses
+- Fixed dashboard refresh issues when switching between multiple client accounts
+- Patched security vulnerability in webhook endpoints (no customer data affected)
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched API for programmatic tour creation: POST to `https://api.example.com/v1/tours`
+- Added analytics webhooks for instant notifications on viewer milestones
+
+```javascript
+// Example webhook payload handler
+app.post('/webhook', (req, res) => {
+  const { event, data } = req.body;
+  if (event === 'tour.viewed') {
+    console.log(`Tour ${data.tourId} viewed by ${data.viewerIp}`);
+  }
+  res.status(200).send('OK');
+});
+```
+
+## Breaking Changes
+
+- Updated API authentication to require `Bearer {YOUR_TOKEN}` headers (legacy API keys deprecated)
+
+</Update>
+
+## Upcoming Roadmap
+
+<Columns cols={2}>
+
+<Card title="AI-Powered Editing" icon="zap" href="#">
+
+Coming in v1.4.0: Automated highlight reels from raw footage using AI scene detection.
+
+</Card>
+
+<Card title="MLS Integration" icon="database" href="#">
+
+Direct sync with major MLS systems for instant property data population.
+
+</Card>
+
+<Card title="Collaborative Tools" icon="users" href="#">
+
+Team workspaces for agencies to co-edit tours and brochures in real-time.
+
+</Card>
+
+<Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+
+Predictive selling insights based on tour engagement patterns.
+
+</Card>
+
+</Columns>
+
+<Expandable title="Detailed Roadmap Timeline" default-open="false">
+
+| Quarter | Key Milestones |
+|---------|----------------|
+| Q4 2024 | AI editing beta, MLS sync |
+| Q1 2025 | Collaborative tools GA |
+| Q2 2025 | Enterprise analytics suite |
+
+</Expandable>
+
+## How to Report Issues
+
+<Callout kind="tip">
+
+You help us improve by reporting bugs and suggesting features. Use the steps below for the fastest resolution.
+
+</Callout>
+
+<Steps>
+
+<Step title="Check Existing Issues" icon="search">
+
+Visit our [GitHub issues](https://github.com/example/cloudview-productions/issues) to see if your problem is already tracked.
+
+</Step>
+
+<Step title="Gather Details" icon="file-text">
+
+Collect screenshots, browser console errors, and reproduction steps. Note your account email and property ID.
+
+</Step>
+
+<Step title="Submit Report" icon="send">
+
+<Tabs>
+
+<Tab title="GitHub" icon="github">
+
+Create a new issue with clear title and steps.
+
+</Tab>
+
+<Tab title="Email" icon="mail">
+
+Send details to `support@example.com` with subject: `[BUG] Brief Description`.
+
+</Tab>
+
+</Tabs>
+
+</Step>
+
+<Step title="Follow Up" icon="message-circle">
+
+We'll respond within `48 hours`. Track progress via the issue thread.
+
+</Step>
+
+</Steps>
+
+<Callout kind="info">
+
+Subscribe to our RSS feed at `/changelog.xml` for instant update notifications.
+
+</Callout>

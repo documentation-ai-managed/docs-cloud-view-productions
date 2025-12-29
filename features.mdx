@@ -1,0 +1,126 @@
+---
+title: Core Features and Use Cases
+description: Explore the main capabilities of Cloud View Productions, from photography and videography to dedicated websites and analytics. See how each feature supports effective real estate marketing.
+---
+
+## Overview
+
+Cloud View Productions delivers comprehensive real estate marketing tools. You create stunning visual content, launch dedicated property sites, and track buyer engagement to accelerate sales. Each feature integrates seamlessly, providing end-to-end solutions for agents and sellers.
+
+## Key Features
+
+Discover the core capabilities that set Cloud View Productions apart.
+
+<Columns cols={2}>
+  <Card title="Immersive Virtual Tours" icon="camera" href="#virtual-tours">
+    Capture 360-degree walkthroughs that let buyers explore properties remotely.
+  </Card>
+  <Card title="Customizable Websites" icon="globe" href="#websites">
+    Build branded sites with your logo, floor plans, and contact forms.
+  </Card>
+  <Card title="Videos & Brochures" icon="video" href="#videos-brochures">
+    Produce cinematic videos and print-ready brochures in minutes.
+  </Card>
+  <Card title="Built-in Analytics" icon="bar-chart-3" href="#analytics">
+    Monitor views, engagement, and leads with real-time dashboards.
+  </Card>
+</Columns>
+
+## Creating Immersive Virtual Tours
+
+Virtual tours transport buyers inside properties without physical visits. You schedule a shoot, and professionals capture high-resolution 360-degree images stitched into interactive experiences.
+
+<Steps>
+  <Step title="Schedule Shoot" icon="calendar">
+    Select a property and book a certified photographer via the dashboard.
+  </Step>
+  <Step title="Capture Content" icon="camera">
+    Use provided equipment for 360 photos and hotspots.
+  </Step>
+  <Step title="Process & Publish" icon="upload">
+    Upload raw files; automated processing generates the tour in `<24` hours.
+  </Step>
+  <Step title="Share Everywhere" icon="share-2">
+    Embed on your site or share unique links.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Add hotspots with agent notes or floor plan popups to boost interactivity.
+</Callout>
+
+## Building Customizable Property Websites
+
+Launch dedicated microsites tailored to each listing. Customize layouts, colors (like brand color `#1598e1`), and content without coding.
+
+<Tabs>
+  <Tab title="Basic Site" icon="layout">
+    Pre-built templates with photos, tours, and contact info.
+
+    ```
+    Example embed for tour:
+    <iframe src="https://tours.cloudviewproductions.com/property/123" width="100%" height="500"></iframe>
+    ```
+  </Tab>
+  <Tab title="Advanced Customization" icon="settings">
+    Add custom CSS or integrate MLS data.
+
+````jsx
+// Custom embed script
+const embedTour = (id) => {
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://tours.cloudviewproductions.com/property/${id}`;
+  iframe.width = '100%';
+  iframe.height = '600';
+  document.getElementById('tour-container').appendChild(iframe);
+};
+embedTour('123');
+````
+  </Tab>
+</Tabs>
+
+## Producing Videos and Brochures
+
+Transform shoots into polished videos and brochures. Automated editing handles transitions, music, and text overlays.
+
+<Expandable title="Video Production Workflow" default-open="true">
+  1. Select clips from your shoot.
+  2. Choose template (e.g., luxury, family home).
+  3. Export in 4K for social or HD for agents.
+</Expandable>
+
+Brochures auto-populate with photos, specs, and QR codes linking to tours.
+
+## Tracking Performance with Analytics
+
+Monitor campaign success with dashboards showing views, time spent, and lead forms.
+
+<CodeGroup tabs="Dashboard Embed,API Query">
+````javascript
+// Embed analytics widget
+<script src="https://analytics.cloudviewproductions.com/widget.js"></script>
+<div id="cvp-analytics" data-property="123"></div>
+````
+
+````javascript
+// Fetch analytics via API
+const fetchAnalytics = async (propertyId) => {
+  const response = await fetch(`https://api.example.com/properties/${propertyId}/analytics`, {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  return response.json();
+};
+````
+</CodeGroup>
+
+| Metric          | Description                          | Benchmark     |
+|-----------------|--------------------------------------|---------------|
+| Total Views     | Unique visitors to site/tour         | `>500`/week  |
+| Avg. Time Spent | Engagement per session               | `>2` minutes |
+| Lead Conversions| Contact forms submitted              | `>5%` rate   |
+
+<Callout kind="success">
+  Integrate with your CRM by exporting CSV data weekly.
+</Callout>
+
+These features work together to create compelling listings that sell faster. Start with a virtual tour and layer on analytics for data-driven refinements.

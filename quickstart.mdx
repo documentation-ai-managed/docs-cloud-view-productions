@@ -1,0 +1,133 @@
+---
+title: Getting Started with Cloud View Productions
+description: Set up your account and launch your first real estate marketing project in minutes. Follow these steps to access our platform and order your initial services.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A valid email address for account creation
+- Property details ready (address, photos, floor plans)
+- Access to a modern web browser like Chrome or Firefox
+
+<Callout kind="info">
+  No credit card required for signup. Upgrade to premium services after your first project.
+</Callout>
+
+## Create and Verify Your Account
+
+Follow these steps to set up your Cloud View Productions account.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://dashboard.example.com/signup` and enter your email, name, and password.
+
+    Choose your account type: agent, broker, or photographer.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification email from Cloud View Productions.
+
+    Click the link to activate your account. Verification takes `<30s`.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to `https://dashboard.example.com/login` and sign in with your credentials.
+
+    Complete the quick onboarding tour.
+  </Step>
+</Steps>
+
+## Navigate the Dashboard
+
+The dashboard provides quick access to your projects, orders, and analytics.
+
+<Columns cols={3}>
+  <Card title="Projects" icon="folder" href="#projects">
+    View active and completed real estate tours.
+  </Card>
+  <Card title="New Order" icon="plus" href="#order">
+    Start a virtual tour, video, or brochure.
+  </Card>
+  <Card title="Analytics" icon="bar-chart-3" href="#analytics">
+    Track views, leads, and sales conversions.
+  </Card>
+</Columns>
+
+## Order Your First Virtual Tour
+
+Select from our service packages to market your property effectively.
+
+<Tabs>
+  <Tab title="Virtual Tour" icon="camera">
+    Ideal for immersive 360-degree property walkthroughs.
+
+    <Steps>
+      <Step title="Select Package" icon="package">
+        Choose basic, premium, or enterprise tour.
+      </Step>
+      <Step title="Enter Details" icon="edit-3">
+        Add property address and schedule a shoot.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Video Flythrough" icon="video">
+    Professional drone and walkthrough videos.
+
+    Schedule your shoot within `24h`.
+  </Tab>
+</Tabs>
+
+## Upload Property Details
+
+Provide media for processing into tours, websites, and brochures.
+
+<Steps>
+  <Step title="Prepare Files" icon="upload">
+    Gather high-res photos (>2MP), floor plans (PDF), and MLS data.
+  </Step>
+  <Step title="Upload via Dashboard" icon="cloud-upload">
+    Drag-and-drop files in the `Property Details` section.
+
+    Or use our API for bulk uploads:
+  </Step>
+  <Step title="Process Order" icon="settings">
+    Review preview and approve for production.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,cURL">
+  ```javascript
+  const formData = new FormData();
+  formData.append('photos', fileInput.files[0]);
+  formData.append('propertyId', 'prop-12345');
+  formData.append('apiKey', 'YOUR_API_KEY');
+
+  await fetch('https://api.example.com/v1/properties/prop-12345/media', {
+    method: 'POST',
+    body: formData,
+  });
+  ```
+  ```bash
+  curl -X POST https://api.example.com/v1/properties/prop-12345/media \
+    -H "Authorization: Bearer YOUR_API_KEY" \
+    -F "photos=@property-photos.zip" \
+    -F "propertyId=prop-12345"
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Processing starts immediately. Expect a dedicated property website live in `<48h`.
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Explore Analytics" icon="activity" href="/docs/analytics">
+    Monitor performance and leads.
+  </Card>
+  <Card title="Advanced Integrations" icon="plug" href="/docs/integrations">
+    Connect MLS systems and CRMs.
+  </Card>
+</Columns>
+
+Your first project launches quickly, helping sell homes faster with stunning visuals and data-driven insights.
